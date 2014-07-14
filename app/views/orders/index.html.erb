@@ -1,1 +1,9 @@
-<p>No orders yet :-(</p>
+<% if @orders.any? %>
+	<% @orders.each do |order| %>
+		<p><%= order.user.email %></p>
+		<p><%= link_to order.post.title, '/posts' %></p>
+		<p><%= order.number %></p>
+	<% end %>
+<% else %>
+	<p>No orders yet :-(</p>
+<% end %>
