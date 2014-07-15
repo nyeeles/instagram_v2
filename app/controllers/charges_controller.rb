@@ -22,7 +22,7 @@ class ChargesController < ApplicationController
 	  )
 
 	  Order.create(user: current_user, post: @post)
-
+ 
 	# rescue Stripe::CardError => e
 	  flash[:notice] = "Thank you for your order!"
 	  redirect_to posts_path

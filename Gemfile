@@ -31,10 +31,12 @@ gem 'devise'
 gem 'bootstrap-sass'
 gem 'aws-sdk'
 gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
+gem 'mailcatcher'
 
 group :test, :development do
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'capybara-email'
 end
 
 group :production do

@@ -46,4 +46,14 @@ describe 'orders page' do
 		end
 	end
 
+	describe 'email confirmation' do
+		before do
+			clear_emails
+		end
+		it 'is sent when an order is created' do
+			Order.create post: post, user: user
+			open_email 'customer@blah.com'
+			expect(current_email).to have_content 'Order successful'
+		end
+	end
 end
