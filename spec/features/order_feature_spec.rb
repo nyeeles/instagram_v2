@@ -54,6 +54,7 @@ describe 'orders page' do
 			Order.create post: post, user: user
 			open_email 'customer@blah.com'
 			expect(current_email).to have_content 'Order successful'
+			expect(current_email.subject).to eq 'You just ordered a print of Pretty picture'
 		end
 	end
 end

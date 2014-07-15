@@ -1,2 +1,4 @@
 <h1>Order successful</h1>
 <p>Thank you for your order :)</p>
+<p>You just ordered a print of <%= @order.post.title %></p>
+<%= link_to image_tag(@order.post.image.url(:thumb)), posts_url(host: 'localhost:3000') %>
