@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :orders
 
   resources :posts do
-  	resources :charge
+  	resources :charges
     resource :map
   end
 end
