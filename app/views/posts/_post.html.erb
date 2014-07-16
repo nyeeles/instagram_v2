@@ -13,10 +13,11 @@
           <%= link_to tag.name, '#' %>
         <% end %>
       </p>
+      <%= link_to "♥ #{post.likes.count}", post_likes_path(post), method: :post, class: 'btn btn-danger' %>
       <% unless post.address.blank? %>
         <%= link_to 'Map', post_map_path(post), class: 'btn btn-success' %>
       <% end %>
-      <%= link_to 'Buy', new_post_charge_path(post), class: 'btn btn-lg btn-default' %>
+      <%= link_to 'Buy', new_post_charge_path(post), class: 'btn btn-default' %>
     </div>
 
     <div class="panel-footer">Posted by: <%= post.user.email %></div>
