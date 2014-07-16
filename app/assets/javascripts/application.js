@@ -14,4 +14,6 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require gmaps
+//= require websocket_rails/main
+
 //= require_tree .

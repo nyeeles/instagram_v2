@@ -32,6 +32,8 @@ gem 'bootstrap-sass'
 gem 'aws-sdk'
 gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 gem 'mailcatcher'
+gem 'websocket-rails'
+gem 'thin'
 
 group :test, :development do
   gem 'rspec-rails'
