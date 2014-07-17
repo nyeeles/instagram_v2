@@ -2,7 +2,9 @@ $(document).ready(function(){
   $('.like-btn').on('click', function(event){
 	event.preventDefault();
 	var url = $(this).attr('href');
-	$.post(url);
+	$.post(url, function(error){
+    alert(error.message);
+  });
 	})
 
   var connection = new WebSocketRails(window.location.host + '/websocket');
