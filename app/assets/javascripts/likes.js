@@ -2,9 +2,8 @@ $(document).ready(function(){
   $('.like-btn').on('click', function(event){
 	event.preventDefault();
 	var url = $(this).attr('href');
-	$.post(url, function(error){
-    alert(error.message);
-  });
+  $(this).addClass('liked')
+	$.post(url);
 	})
 
   var connection = new WebSocketRails(window.location.host + '/websocket');
