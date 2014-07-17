@@ -34,7 +34,7 @@ gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 gem 'mailcatcher'
 gem 'websocket-rails'
 gem 'thin'
-# gem 'selenium-webdriver'
+gem 'omniauth-facebook'
 
 group :test, :development do
   gem 'rspec-rails'
