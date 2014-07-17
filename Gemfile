@@ -34,11 +34,14 @@ gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 gem 'mailcatcher'
 gem 'websocket-rails'
 gem 'thin'
+# gem 'selenium-webdriver'
 
 group :test, :development do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'capybara-email'
+  gem 'poltergeist'
+  gem 'database_cleaner'
 end
 
 group :production do
