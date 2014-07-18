@@ -31,12 +31,12 @@ gem 'devise'
 gem 'bootstrap-sass'
 gem 'aws-sdk'
 gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
-gem 'mailcatcher'
 gem 'websocket-rails'
 gem 'thin'
 gem 'omniauth-facebook'
 
 group :test, :development do
+  gem 'mailcatcher'
   gem 'rspec-rails'
   gem 'capybara'
   gem 'capybara-email'
