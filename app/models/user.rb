@@ -14,4 +14,9 @@ class User < ActiveRecord::Base
 	    # user.image = auth.info.image # assuming the user model has an image
 	  end
 	end
+
+	def has_liked?(post)
+		likes = Like.all
+		likes.where(user_id: self.id).any?		
+	end
 end

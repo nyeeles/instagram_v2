@@ -18,16 +18,25 @@ describe 'liking posts' do
 	# 	expect(page).to have_link '♥ 1'
 	# end
 
-	it 'can only be liked once per user', js: true do
+	# it 'can only be liked once per user', js: true do
+	# 	login_as alex
+	# 	visit '/posts'
+	# 	click_link '♥ 0'
+	# 	sleep 2
+
+	# 	click_link '♥ 1'
+	# 	sleep 2
+
+	# 	expect(page).to have_link '♥ 1'
+	# end
+
+	it 'turns grey once the user has liked', js: true do
 		login_as alex
 		visit '/posts'
 		click_link '♥ 0'
 		sleep 2
-
-		click_link '♥ 1'
-		sleep 2
-
-		expect(page).to have_link '♥ 1'
+		# expect(page).to have_link '♥ 1'
+		expect(page).to have_css '.disabled'
 	end
 
 end
